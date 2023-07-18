@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
+//The code below initializes the Sequelize ORM, syncs the models to the database, then starts the server.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
