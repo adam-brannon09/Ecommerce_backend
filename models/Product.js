@@ -10,6 +10,7 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    // see category.js model for comments about functionality.
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
