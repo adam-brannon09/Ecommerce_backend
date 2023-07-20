@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
+//See code explanation at the bottom of this file
+
 // The `/api/categories` endpoint
 
 router.get('/', (req, res) => {
@@ -52,6 +54,7 @@ router.delete('/:id', (req, res) => {
 module.exports = router;
 
 // Code Explanation: !This list was written for the tag-routes.js file, but the same logic applies to the category-routes.js file.
+// instead of Tag, use Category
 
 // 1. `router.get('/', (req, res) => { ... })`:
 //    - Route: This route handles a GET request to the root ("/") endpoint.

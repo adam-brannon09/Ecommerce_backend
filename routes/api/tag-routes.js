@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
+//See code explanation at the bottom of this file
 // The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
@@ -79,4 +80,5 @@ module.exports = router;
 //    - Implementation: It uses the `Tag` model's `destroy` method with the `id` parameter to identify the tag to delete.
 //    - Response: Sends a JSON response with the deleted tag on success (HTTP status 200) or an error JSON response on failure (HTTP status 500).
 
-// Note: In all the route handlers, if an error occurs during the database operation (such as querying, creating, updating, or deleting a record), it will send an error response with HTTP status 500.
+// Note: In all the route handlers, if an error occurs during the database operation (such as querying, creating, updating, or deleting a record), 
+// it will send an error response with HTTP status 500.
