@@ -13,6 +13,24 @@
 ## Description
 This app is the backend framework of a fictional E-commmerce site. It uses Express.js API and Sequelize to interact with a MySQL database. The database contains products, categories, tags, and product tags. The user can perform CRUD operations on the database using API routes.
 
+## Quick Links
+
+- [Installation](#Installation)
+  
+- [Usage](#Usage)
+
+- [Technologies](#Technologies)
+
+- [Demo](#Demo)
+  
+- [Contributors](#Contributing)
+  
+- [Tests](#Tests)
+  
+- [Feedback and Support](#Feedback-and-Support)
+  
+- [License](#License)
+
 ## Installation
 
 To install this application, please follow the below instructions:
@@ -51,7 +69,7 @@ To install this application, please follow the below instructions:
 
 <img src="./assets/insomnia.png" style="width:850px;height:auto">
 
-## Technologies Used
+## Technologies
 
 <div style="display:flex;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="width:100px;height:auto;padding:50px;" />
