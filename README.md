@@ -15,21 +15,19 @@ This app is the backend framework of a fictional E-commmerce site. It uses Expre
 
 ## Quick Links
 
-- [Installation](#Installation)
+- [Installation](#installation)
   
-- [Usage](#Usage)
+- [Usage](#usage)
 
-- [Technologies](#Technologies)
+- [Technologies](#technologies)
 
-- [Demo](#Demo)
+- [Demo](#demo)
   
-- [Contributors](#Contributing)
+- [Contributors](#contributors)
   
-- [Tests](#Tests)
+- [Feedback and Support](#feedback-and-support)
   
-- [Feedback and Support](#Feedback-and-Support)
-  
-- [License](#License)
+- [License](#license)
 
 ## Installation
 
