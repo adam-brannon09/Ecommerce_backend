@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   Category.findAll({
     include: [Product],
   })
-    .then((categories) => res.json(categories))
+    .then((category) => res.json(category))
     .catch((err) => res.status(500).json(err));
 });
 
@@ -29,17 +29,18 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new category
   Category.create(req.body)
-    .then((category) => res.status(200).json(category))
+    .then((category) => res.status(200).json({message:`${req.body.category_name} category created!`}))
     .catch((err) => res.status(500).json(err));
 });
 
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
   Category.update(req.body, {
-    where: { id: req.params.id, },
+    where: {
+      id: req.params.id,
+    },
   })
-    .then((category) => res.status(200).json(category))
-    .catch((err) => res.status(500).json(err));
+    .then((category) => res.status(200).json({message: `Category ${req.params.id} updated!`}))
+    .catch((err) => res.status(400).json(err));
 });
 
 router.delete('/:id', (req, res) => {
@@ -47,7 +48,7 @@ router.delete('/:id', (req, res) => {
   Category.destroy({
     where: { id: req.params.id, },
   })
-    .then((category) => res.status(200).json(category))
+    .then((category) => res.status(200).json({message: `Category ${req.params.id} deleted!`}))
     .catch((err) => res.status(500).json(err));
 });
 

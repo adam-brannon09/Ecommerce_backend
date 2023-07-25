@@ -13,8 +13,12 @@ Category.init(
       allowNull: false, //the id column can't be null
       primaryKey: true, //this is the primary key
       autoIncrement: true, //the value of the id field will automatically increment by 1
-
     },
+      category_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    
   },
   {
     // defines the db connection that the model will use

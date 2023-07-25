@@ -66,6 +66,7 @@ router.put('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
+  
   })
   .then((product) => {
     if (req.body.tagIds && req.body.tagIds.length) {
@@ -79,6 +80,7 @@ router.put('/:id', (req, res) => {
           return {
             product_id: req.params.id,
             tag_id,
+            
           };
         });
         // figure out which ones to remove
@@ -90,15 +92,18 @@ router.put('/:id', (req, res) => {
           return Promise.all([
             ProductTag.destroy({ where: { id: productTagsToRemove } }),
             ProductTag.bulkCreate(newProductTags),
+            
           ]);
         }
 
-        return res.json(product);
+    return res.json({message: `Product ${req.params.id} updated!`});
+    
     }) 
     .catch((err) => {
-      // console.log(err);
+      console.log(err);
       res.status(400).json(err);
     });
+    
 });
 
 router.delete('/:id', (req, res) => {
