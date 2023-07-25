@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   Tag.findOne({
-    where: { id: req.params.id },
+    where: { id: req.params.id, },
     include: [{ model: Product, through: ProductTag, }],
   })
     .then((tag) => res.status(200).json(tag))
@@ -34,14 +34,14 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-  Tag.update(req.body, { where: { id: req.params.id } })
+  Tag.update(req.body, { where: { id: req.params.id, } })
     .then((tag) => res.status(200).json(tag))
     .catch((err) => res.status(500).json(err));
 });
 
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
-  Tag.destroy({ where: { id: req.params.id } })
+  Tag.destroy({ where: { id: req.params.id, } })
     .then((tag) => res.status(200).json(tag))
     .catch((err) => res.status(500).json(err));
 });
